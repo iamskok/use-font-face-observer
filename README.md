@@ -1,4 +1,4 @@
-<h1 align="center">Font Face Observer React Hook</h1>
+<h1 align="center">Font Face Observer React Hook 🪝</h1>
 
 > [Font Face Observer](https://github.com/bramstein/fontfaceobserver) is a small `@font-face` loader and monitor compatible with any webfont service. It will monitor when a webfont is loaded and notify you. It does not limit you in any way in the  where, when, or how you load your webfonts. Unlike the [Web Font Loader](https://github.com/typekit/webfontloader) Font Face Observer uses scroll events to detect font loads efficiently and with minimum overhead.
 
