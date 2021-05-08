@@ -1,6 +1,5 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "baseBranches": ["next"],
   "extends": [
     "config:base",
     ":pinDevDependencies",
