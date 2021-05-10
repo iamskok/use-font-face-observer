@@ -19,7 +19,7 @@ yarn add use-font-face-observer
    Roboto):
 
 ```js
-const fontIsLoaded = useFontFaceObserver([
+const isFontListLoaded = useFontFaceObserver([
   {
     font: `Roboto`,
     style: `italic`,
@@ -32,7 +32,7 @@ const fontIsLoaded = useFontFaceObserver([
 2. Detect when multiple font faces are loaded:
 
 ```js
-const fontsAreLoaded = useFontFaceObserver([
+const isFontListLoaded = useFontFaceObserver([
   { font: `Roboto` },
   { font: `Inter` },
 ]);
@@ -40,13 +40,13 @@ const fontsAreLoaded = useFontFaceObserver([
 
 3. Extra options:
 
-- When your font doesn't contain at least the Latin "BESbwy" characters you must
-  pass a custom test string.
-- Wait for 5000ms (defaults to 3000ms)
+- Custom test string (When your font doesn't contain at least the Latin "BESbwy" characters you must
+  pass a test string).
+- Custom timeout (defaults to 3000ms)
 - Show console errors (defaults to `false`)
 
 ```js
-const fontsAreLoaded = useFontFaceObserver(
+const isFontListLoaded = useFontFaceObserver(
   [{ font: `Roboto` }],
   {
     testString?: `ФЯЦ`
