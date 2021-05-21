@@ -1,4 +1,4 @@
-[![CI 🤖](https://github.com/iamskok/use-font-face-observer/actions/workflows/ci.yml/badge.svg)](https://github.com/iamskok/use-font-face-observer/actions/workflows/ci.yml)
+[![CI](https://github.com/iamskok/use-font-face-observer/actions/workflows/ci.yml/badge.svg)](https://github.com/iamskok/use-font-face-observer/actions/workflows/ci.yml)
 
 <h1 align="center">Font Face Observer React Hook 🪝</h1>
 
