@@ -1,3 +1,5 @@
+[![CI](https://github.com/iamskok/use-font-face-observer/actions/workflows/ci.yml/badge.svg)](https://github.com/iamskok/use-font-face-observer/actions/workflows/ci.yml)
+
 <h1 align="center">Font Face Observer React Hook 🪝</h1>
 
 > [Font Face Observer](https://github.com/bramstein/fontfaceobserver) is a small
