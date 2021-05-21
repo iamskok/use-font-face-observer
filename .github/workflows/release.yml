@@ -1,25 +1,21 @@
-name: Release
+name: CI 🤖
+
 on:
   push:
     branches:
-      - master
-      - next
-      - next-major
-      - beta
-      - alpha
+      - '*'
+  pull_request:
+    branches:
+      - '*'
+  workflow_dispatch:
+
 jobs:
-  release:
-    name: Release
+  test:
+    name: Test
     runs-on: ubuntu-latest
     steps:
-      - name: 🛑 Cancel Previous Runs
-        uses: styfle/cancel-workflow-action@0.9.0
-        with:
-          access_token: ${{ secrets.GITHUB_TOKEN }}
       - name: ⬇️ Checkout Repo
         uses: actions/checkout@v2
-        with:
-          fetch-depth: 0
       - name: ⎔ Setup Node.js
         uses: actions/setup-node@v2
         with:
@@ -30,8 +26,24 @@ jobs:
         run: yarn build
       - name: 🧪 Test package
         run: yarn test
+  release:
+    name: Release
+    needs: test
+    if: ${{ github.ref == 'refs/heads/master' && github.event_name != 'pull_request'}}
+    runs-on: ubuntu-latest
+    - name: 🛑 Cancel Previous Runs
+        uses: styfle/cancel-workflow-action@0.9.0
+        with:
+          access_token: ${{ secrets.GITHUB_TOKEN }}
+      - name: ⬇️ Checkout Repo
+        uses: actions/checkout@v2
       - name: 🚀 Release
+        uses: cycjimmy/semantic-release-action@v2
+        id: semantic
+        with:
+          extra_plugins: |
+            @semantic-release/changelog
+            @semantic-release/git
+            conventional-changelog-conventionalcommits
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-        run: npx semantic-release@17.4.2
