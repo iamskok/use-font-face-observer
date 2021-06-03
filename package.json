@@ -33,7 +33,7 @@
     "@commitlint/config-conventional": "12.1.4",
     "@semantic-release/changelog": "5.0.1",
     "@semantic-release/git": "9.0.0",
-    "@testing-library/react-hooks": "5.1.2",
+    "@testing-library/react-hooks": "7.0.0",
     "@types/fontfaceobserver": "0.0.6",
     "@types/react": "17.0.5",
     "@types/jest": "26.0.23",
