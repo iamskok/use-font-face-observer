@@ -22,8 +22,6 @@ jobs:
           node-version: 15
       - name: 📥 Install dependencies
         run: yarn install
-      - name: 🏗 Build package
-        run: yarn build
       - name: 🧪 Test package
         run: yarn test
   release:
@@ -38,6 +36,10 @@ jobs:
           access_token: ${{ secrets.GITHUB_TOKEN }}
       - name: ⬇️ Checkout Repo
         uses: actions/checkout@v2
+      - name: 📥 Install dependencies
+        run: yarn install
+      - name: 🏗 Build package
+        run: yarn build
       - name: 🚀 Release
         uses: cycjimmy/semantic-release-action@v2
         id: semantic
