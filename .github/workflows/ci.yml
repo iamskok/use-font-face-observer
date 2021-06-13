@@ -36,6 +36,8 @@ jobs:
           access_token: ${{ secrets.GITHUB_TOKEN }}
       - name: ⬇️ Checkout Repo
         uses: actions/checkout@v2
+      - name: 📥 Install dependencies
+        run: yarn install
       - name: 🏗 Build package
         run: yarn build
       - name: 🚀 Release
