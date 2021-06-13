@@ -10,26 +10,26 @@ on:
   workflow_dispatch:
 
 jobs:
-  test:
-    name: Test
-    runs-on: ubuntu-latest
-    steps:
-      - name: ⬇️ Checkout Repo
-        uses: actions/checkout@v2
-      - name: ⎔ Setup Node.js
-        uses: actions/setup-node@v2
-        with:
-          node-version: 15
-      - name: 📥 Install dependencies
-        run: yarn install
-      - name: 🏗 Build package
-        run: yarn build
-      - name: 🧪 Test package
-        run: yarn test
+  # test:
+  #   name: Test
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - name: ⬇️ Checkout Repo
+  #       uses: actions/checkout@v2
+  #     - name: ⎔ Setup Node.js
+  #       uses: actions/setup-node@v2
+  #       with:
+  #         node-version: 15
+  #     - name: 📥 Install dependencies
+  #       run: yarn install
+  #     - name: 🏗 Build package
+  #       run: yarn build
+  #     - name: 🧪 Test package
+  #       run: yarn test
   release:
     name: Release
-    needs: test
-    if: ${{ github.ref == 'refs/heads/master' && github.event_name != 'pull_request'}}
+    # needs: test
+    # if: ${{ github.ref == 'refs/heads/master' && github.event_name != 'pull_request'}}
     runs-on: ubuntu-latest
     steps:
       - name: 🛑 Cancel Previous Runs
@@ -41,6 +41,8 @@ jobs:
       - name: 🚀 Release
         uses: cycjimmy/semantic-release-action@v2
         id: semantic
+        semantic_version: 17.4.3
+        dry_run: true
         with:
           extra_plugins: |
             @semantic-release/changelog
