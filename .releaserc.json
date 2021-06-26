@@ -15,7 +15,13 @@
     [
       "@semantic-release/release-notes-generator",
       {
-        "preset": "conventionalcommits"
+        "preset": "conventionalcommits",
+        "releaseRules": [
+          {
+            "type": "chore",
+            "release": "patch"
+          }
+        ]
       }
     ],
     "@semantic-release/changelog",
