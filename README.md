@@ -23,7 +23,7 @@ yarn add use-font-face-observer
 ```js
 const isFontListLoaded = useFontFaceObserver([
   {
-    font: `Roboto`,
+    family: `Roboto`,
     style: `italic`,
     weight: `bold`,
     stretch: `condensed`,
@@ -35,8 +35,8 @@ const isFontListLoaded = useFontFaceObserver([
 
 ```js
 const isFontListLoaded = useFontFaceObserver([
-  { font: `Roboto` },
-  { font: `Inter` },
+  { family: `Roboto` },
+  { family: `Inter` },
 ]);
 ```
 
@@ -49,9 +49,9 @@ const isFontListLoaded = useFontFaceObserver([
 
 ```js
 const isFontListLoaded = useFontFaceObserver(
-  [{ font: `Roboto` }],
+  [{ family: `Roboto` }],
   {
-    testString?: `ФЯЦ`
+    testString?: `ФЯЦ`,
     timeout: 5000,
   },
   {
