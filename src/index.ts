@@ -1,6 +1,13 @@
 import { useState, useEffect } from "react"
 import FontFaceObserver from "fontfaceobserver"
 
+/**
+ * @typedef FontFace
+ * @property {string} family The font-family: Roboto, Inter, Open Sans, etc
+ * @property {string|number} weight The font-weight: normal, bold, 800, etc
+ * @property {string} style The font-style: normal, italic, oblique
+ * @property {string} stretch The font stretch: normal, condensed, expanded, etc
+ */
 interface FontFace {
   family: string
   weight?:
