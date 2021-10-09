@@ -97,7 +97,10 @@ test(`Hook returns \`false\` when multiple \`FontFace\`s were passed and rejecte
   try {
     await waitForNextUpdate()
   } catch (error) {
-    if (error.message.toLowerCase().includes(`timed out`)) {
+    if (
+      error instanceof Error &&
+      error.message.toLowerCase().includes(`timed out`)
+    ) {
       flag = true
     }
   }
