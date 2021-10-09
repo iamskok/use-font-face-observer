@@ -1,3 +1,10 @@
+### [1.1.41](https://github.com/iamskok/use-font-face-observer/compare/v1.1.40...v1.1.41) (2021-10-09)
+
+
+### Bug Fixes
+
+* add type guard for jest test case ([#87](https://github.com/iamskok/use-font-face-observer/issues/87)) ([a23cf92](https://github.com/iamskok/use-font-face-observer/commit/a23cf92dbf45f470d2a99f17033057bdbd55e73b))
+
 ### [1.1.40](https://github.com/iamskok/use-font-face-observer/compare/v1.1.39...v1.1.40) (2021-10-07)
 
 ### [1.1.39](https://github.com/iamskok/use-font-face-observer/compare/v1.1.38...v1.1.39) (2021-09-25)
