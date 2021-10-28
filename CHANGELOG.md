@@ -1,3 +1,5 @@
+### [1.1.53](https://github.com/iamskok/use-font-face-observer/compare/v1.1.52...v1.1.53) (2021-10-28)
+
 ### [1.1.52](https://github.com/iamskok/use-font-face-observer/compare/v1.1.51...v1.1.52) (2021-10-26)
 
 ### [1.1.51](https://github.com/iamskok/use-font-face-observer/compare/v1.1.50...v1.1.51) (2021-10-25)
