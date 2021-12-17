@@ -1,3 +1,12 @@
+### [1.1.75](https://github.com/iamskok/use-font-face-observer/compare/v1.1.74...v1.1.75) (2021-12-17)
+
+
+### Bug Fixes
+
+* ci ([8bb45ea](https://github.com/iamskok/use-font-face-observer/commit/8bb45eab89d3c60050dea6245efad121a837926f))
+* ci versioning ([28c445f](https://github.com/iamskok/use-font-face-observer/commit/28c445fd1fe97fae5d761cf5d099b47c1cfe3822))
+* ci versioning ([9f69aa9](https://github.com/iamskok/use-font-face-observer/commit/9f69aa914cd97c88174096f4d678ffb52e01146b))
+
 ### [1.1.74](https://github.com/iamskok/use-font-face-observer/compare/v1.1.73...v1.1.74) (2021-11-24)
 
 ### [1.1.73](https://github.com/iamskok/use-font-face-observer/compare/v1.1.72...v1.1.73) (2021-11-21)
