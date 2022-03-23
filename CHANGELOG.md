@@ -1,3 +1,94 @@
+### [1.1.77](https://github.com/iamskok/use-font-face-observer/compare/v1.1.76...v1.1.77) (2021-12-17)
+
+### [1.1.76](https://github.com/iamskok/use-font-face-observer/compare/v1.1.75...v1.1.76) (2021-12-17)
+
+
+### Bug Fixes
+
+* ci ([7dc4239](https://github.com/iamskok/use-font-face-observer/commit/7dc4239fb9ac3c3e59925c4f921e8654aca98c0d))
+
+### [1.1.75](https://github.com/iamskok/use-font-face-observer/compare/v1.1.74...v1.1.75) (2021-12-17)
+
+
+### Bug Fixes
+
+* ci ([8bb45ea](https://github.com/iamskok/use-font-face-observer/commit/8bb45eab89d3c60050dea6245efad121a837926f))
+* ci versioning ([28c445f](https://github.com/iamskok/use-font-face-observer/commit/28c445fd1fe97fae5d761cf5d099b47c1cfe3822))
+* ci versioning ([9f69aa9](https://github.com/iamskok/use-font-face-observer/commit/9f69aa914cd97c88174096f4d678ffb52e01146b))
+
+### [1.1.74](https://github.com/iamskok/use-font-face-observer/compare/v1.1.73...v1.1.74) (2021-11-24)
+
+### [1.1.73](https://github.com/iamskok/use-font-face-observer/compare/v1.1.72...v1.1.73) (2021-11-21)
+
+### [1.1.72](https://github.com/iamskok/use-font-face-observer/compare/v1.1.71...v1.1.72) (2021-11-19)
+
+### [1.1.71](https://github.com/iamskok/use-font-face-observer/compare/v1.1.70...v1.1.71) (2021-11-18)
+
+### [1.1.70](https://github.com/iamskok/use-font-face-observer/compare/v1.1.69...v1.1.70) (2021-11-17)
+
+### [1.1.69](https://github.com/iamskok/use-font-face-observer/compare/v1.1.68...v1.1.69) (2021-11-13)
+
+### [1.1.68](https://github.com/iamskok/use-font-face-observer/compare/v1.1.67...v1.1.68) (2021-11-11)
+
+### [1.1.67](https://github.com/iamskok/use-font-face-observer/compare/v1.1.66...v1.1.67) (2021-11-09)
+
+### [1.1.66](https://github.com/iamskok/use-font-face-observer/compare/v1.1.65...v1.1.66) (2021-11-07)
+
+### [1.1.65](https://github.com/iamskok/use-font-face-observer/compare/v1.1.64...v1.1.65) (2021-11-06)
+
+### [1.1.64](https://github.com/iamskok/use-font-face-observer/compare/v1.1.63...v1.1.64) (2021-11-05)
+
+### [1.1.63](https://github.com/iamskok/use-font-face-observer/compare/v1.1.62...v1.1.63) (2021-11-05)
+
+### [1.1.62](https://github.com/iamskok/use-font-face-observer/compare/v1.1.61...v1.1.62) (2021-11-05)
+
+### [1.1.61](https://github.com/iamskok/use-font-face-observer/compare/v1.1.60...v1.1.61) (2021-11-04)
+
+### [1.1.60](https://github.com/iamskok/use-font-face-observer/compare/v1.1.59...v1.1.60) (2021-10-31)
+
+### [1.1.59](https://github.com/iamskok/use-font-face-observer/compare/v1.1.58...v1.1.59) (2021-10-31)
+
+### [1.1.58](https://github.com/iamskok/use-font-face-observer/compare/v1.1.57...v1.1.58) (2021-10-30)
+
+### [1.1.57](https://github.com/iamskok/use-font-face-observer/compare/v1.1.56...v1.1.57) (2021-10-30)
+
+### [1.1.56](https://github.com/iamskok/use-font-face-observer/compare/v1.1.55...v1.1.56) (2021-10-29)
+
+### [1.1.55](https://github.com/iamskok/use-font-face-observer/compare/v1.1.54...v1.1.55) (2021-10-29)
+
+### [1.1.54](https://github.com/iamskok/use-font-face-observer/compare/v1.1.53...v1.1.54) (2021-10-28)
+
+### [1.1.53](https://github.com/iamskok/use-font-face-observer/compare/v1.1.52...v1.1.53) (2021-10-28)
+
+### [1.1.52](https://github.com/iamskok/use-font-face-observer/compare/v1.1.51...v1.1.52) (2021-10-26)
+
+### [1.1.51](https://github.com/iamskok/use-font-face-observer/compare/v1.1.50...v1.1.51) (2021-10-25)
+
+### [1.1.50](https://github.com/iamskok/use-font-face-observer/compare/v1.1.49...v1.1.50) (2021-10-21)
+
+### [1.1.49](https://github.com/iamskok/use-font-face-observer/compare/v1.1.48...v1.1.49) (2021-10-19)
+
+### [1.1.48](https://github.com/iamskok/use-font-face-observer/compare/v1.1.47...v1.1.48) (2021-10-19)
+
+### [1.1.47](https://github.com/iamskok/use-font-face-observer/compare/v1.1.46...v1.1.47) (2021-10-18)
+
+### [1.1.46](https://github.com/iamskok/use-font-face-observer/compare/v1.1.45...v1.1.46) (2021-10-11)
+
+### [1.1.45](https://github.com/iamskok/use-font-face-observer/compare/v1.1.44...v1.1.45) (2021-10-11)
+
+### [1.1.44](https://github.com/iamskok/use-font-face-observer/compare/v1.1.43...v1.1.44) (2021-10-11)
+
+### [1.1.43](https://github.com/iamskok/use-font-face-observer/compare/v1.1.42...v1.1.43) (2021-10-10)
+
+### [1.1.42](https://github.com/iamskok/use-font-face-observer/compare/v1.1.41...v1.1.42) (2021-10-09)
+
+### [1.1.41](https://github.com/iamskok/use-font-face-observer/compare/v1.1.40...v1.1.41) (2021-10-09)
+
+
+### Bug Fixes
+
+* add type guard for jest test case ([#87](https://github.com/iamskok/use-font-face-observer/issues/87)) ([a23cf92](https://github.com/iamskok/use-font-face-observer/commit/a23cf92dbf45f470d2a99f17033057bdbd55e73b))
+
 ### [1.1.40](https://github.com/iamskok/use-font-face-observer/compare/v1.1.39...v1.1.40) (2021-10-07)
 
 ### [1.1.39](https://github.com/iamskok/use-font-face-observer/compare/v1.1.38...v1.1.39) (2021-09-25)
