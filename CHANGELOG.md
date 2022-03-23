@@ -1,3 +1,10 @@
+## [1.2.0](https://github.com/iamskok/use-font-face-observer/compare/v1.1.77...v1.2.0) (2022-03-23)
+
+
+### Features
+
+* export interfaces ([#120](https://github.com/iamskok/use-font-face-observer/issues/120)) ([4bc94fb](https://github.com/iamskok/use-font-face-observer/commit/4bc94fb9203d5960eadfb90aa92f21675c7b8c13))
+
 ### [1.1.77](https://github.com/iamskok/use-font-face-observer/compare/v1.1.76...v1.1.77) (2021-12-17)
 
 ### [1.1.76](https://github.com/iamskok/use-font-face-observer/compare/v1.1.75...v1.1.76) (2021-12-17)
