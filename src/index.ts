@@ -8,7 +8,7 @@ import FontFaceObserver from "fontfaceobserver"
  * @property {string} style The font-style: normal, italic, oblique
  * @property {string} stretch The font stretch: normal, condensed, expanded, etc
  */
-interface FontFace {
+export interface FontFace {
   family: string
   weight?:
     | `light`
@@ -37,12 +37,12 @@ interface FontFace {
     | `ultra-expanded`
 }
 
-interface Options {
+export interface Options {
   testString?: string
   timeout?: number
 }
 
-interface Config {
+export interface Config {
   showErrors: boolean
 }
 
