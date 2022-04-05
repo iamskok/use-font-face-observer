@@ -1,3 +1,10 @@
+### [1.2.1](https://github.com/iamskok/use-font-face-observer/compare/v1.2.0...v1.2.1) (2022-04-05)
+
+
+### Bug Fixes
+
+* add modern esm bundle ([#122](https://github.com/iamskok/use-font-face-observer/issues/122)) ([81f4ba2](https://github.com/iamskok/use-font-face-observer/commit/81f4ba2aacd3d81bf2feb445a16f999600ae6612))
+
 ## [1.2.0](https://github.com/iamskok/use-font-face-observer/compare/v1.1.77...v1.2.0) (2022-03-23)
 
 
