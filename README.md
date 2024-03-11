@@ -51,7 +51,7 @@ const isFontListLoaded = useFontFaceObserver([
 const isFontListLoaded = useFontFaceObserver(
   [{ family: `Roboto` }],
   {
-    testString?: `ФЯЦ`,
+    testString: `ФЯЦ`,
     timeout: 5000,
   },
   {
