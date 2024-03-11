@@ -28,8 +28,7 @@
     "test": "jest"
   },
   "dependencies": {
-    "fontfaceobserver": "2.1.0",
-    "react": "17.0.2"
+    "fontfaceobserver": "2.1.0"
   },
   "devDependencies": {
     "@commitlint/cli": "15.0.0",
@@ -58,6 +57,7 @@
     "lint-staged": "11.2.6",
     "microbundle": "^0.14.2",
     "prettier": "2.4.1",
+    "react": "17.0.2",
     "react-test-renderer": "17.0.2",
     "semantic-release": "18.0.0",
     "ts-jest": "27.0.4",
