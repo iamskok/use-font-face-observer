@@ -13,9 +13,9 @@
   "umd:main": "dist/index.umd.js",
   "module": "dist/index.module.js",
   "exports": {
+    "types": "./dist/index.d.ts",
     "require": "./dist/index.js",
-    "default": "./dist/index.modern.js",
-    "types": "./dist/index.d.ts"
+    "default": "./dist/index.modern.js"
   },
   "types": "dist/index.d.ts",
   "scripts": {
