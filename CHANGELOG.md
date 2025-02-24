@@ -1,3 +1,10 @@
+## [1.3.0](https://github.com/iamskok/use-font-face-observer/compare/v1.2.2...v1.3.0) (2025-02-24)
+
+
+### Features
+
+* add explicit error in log ([#157](https://github.com/iamskok/use-font-face-observer/issues/157)) ([94f2d38](https://github.com/iamskok/use-font-face-observer/commit/94f2d3880e2a4a5127b55949e715e48068751f2a))
+
 ### [1.2.2](https://github.com/iamskok/use-font-face-observer/compare/v1.2.1...v1.2.2) (2024-05-20)
 
 ### [1.2.1](https://github.com/iamskok/use-font-face-observer/compare/v1.2.0...v1.2.1) (2022-04-05)
