@@ -56,7 +56,7 @@
     "husky": "7.0.4",
     "jest": "27.3.1",
     "lint-staged": "11.2.6",
-    "microbundle": "^0.14.2",
+    "microbundle": "0.14.2",
     "prettier": "2.4.1",
     "react": "17.0.2",
     "react-test-renderer": "17.0.2",
