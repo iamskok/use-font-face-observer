@@ -46,15 +46,27 @@ export interface Config {
   showErrors: boolean
 }
 
+export interface UseFontFaceObserverResult {
+  isLoading: boolean
+  isResolved: boolean
+  error: Error | null
+}
+
 function useFontFaceObserver(
   fontFaces: FontFace[] = [],
   { testString, timeout }: Options = {},
   { showErrors }: Config = { showErrors: false }
-): boolean {
+): UseFontFaceObserverResult {
+  const [isLoading, setIsLoading] = useState(true)
   const [isResolved, setIsResolved] = useState(false)
+  const [error, setError] = useState<Error | null>(null)
   const fontFacesString = JSON.stringify(fontFaces)
 
   useEffect(() => {
+    setIsLoading(true)
+    setIsResolved(false)
+    setError(null)
+
     const promises = JSON.parse(fontFacesString).map(
       ({ family, weight, style, stretch }: FontFace) =>
         new FontFaceObserver(family, {
@@ -65,8 +77,14 @@ function useFontFaceObserver(
     )
 
     Promise.all(promises)
-      .then(() => setIsResolved(true))
+      .then(() => {
+        setIsLoading(false)
+        setIsResolved(true)
+      })
       .catch((e: unknown) => {
+        setIsLoading(false)
+        const errorObj = e instanceof Error ? e : new Error(String(e))
+        setError(errorObj)
         if (showErrors) {
           // eslint-disable-next-line no-console
           console.error(`An error occurred during font loading`, e)
@@ -74,7 +92,7 @@ function useFontFaceObserver(
       })
   }, [fontFacesString, testString, timeout, showErrors])
 
-  return isResolved
+  return { isLoading, isResolved, error }
 }
 
 export default useFontFaceObserver

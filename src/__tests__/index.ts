@@ -7,7 +7,7 @@ jest.mock(`fontfaceobserver`)
 
 const MockedFontFaceObserverModule = mocked(FontFaceObserver, true).prototype
 
-test(`Hook returns \`true\` when no \`FontFace\`s were passed`, async () => {
+test(`Hook returns resolved state when no \`FontFace\`s were passed`, async () => {
   const { result, waitForNextUpdate } = renderHook(
     ({ fontFaces }) => useFontFaceObserver(fontFaces),
     {
@@ -19,10 +19,12 @@ test(`Hook returns \`true\` when no \`FontFace\`s were passed`, async () => {
 
   await waitForNextUpdate()
 
-  expect(result.current).toBe(true)
+  expect(result.current.isLoading).toBe(false)
+  expect(result.current.isResolved).toBe(true)
+  expect(result.current.error).toBe(null)
 })
 
-test(`Hook returns \`true\` when 1 \`FontFace\` was passed and resolved`, async () => {
+test(`Hook returns resolved state when 1 \`FontFace\` was passed and resolved`, async () => {
   MockedFontFaceObserverModule.load = jest
     .fn()
     .mockImplementationOnce(async () => Promise.resolve())
@@ -42,10 +44,12 @@ test(`Hook returns \`true\` when 1 \`FontFace\` was passed and resolved`, async 
 
   await waitForNextUpdate()
 
-  expect(result.current).toBe(true)
+  expect(result.current.isLoading).toBe(false)
+  expect(result.current.isResolved).toBe(true)
+  expect(result.current.error).toBe(null)
 })
 
-test(`Hook returns \`true\` when multiple \`FontFace\`s were passed and resolved`, async () => {
+test(`Hook returns resolved state when multiple \`FontFace\`s were passed and resolved`, async () => {
   MockedFontFaceObserverModule.load = jest
     .fn()
     .mockImplementationOnce(async () => Promise.resolve())
@@ -68,13 +72,16 @@ test(`Hook returns \`true\` when multiple \`FontFace\`s were passed and resolved
 
   await waitForNextUpdate()
 
-  expect(result.current).toBe(true)
+  expect(result.current.isLoading).toBe(false)
+  expect(result.current.isResolved).toBe(true)
+  expect(result.current.error).toBe(null)
 })
 
-test(`Hook returns \`false\` when multiple \`FontFace\`s were passed and rejected`, async () => {
+test(`Hook returns error state when multiple \`FontFace\`s were passed and rejected`, async () => {
+  const testError = new Error(`Font loading failed`)
   MockedFontFaceObserverModule.load = jest
     .fn()
-    .mockImplementationOnce(async () => Promise.reject())
+    .mockImplementationOnce(async () => Promise.reject(testError))
 
   const { result, waitForNextUpdate } = renderHook(
     ({ fontFaces }) => useFontFaceObserver(fontFaces, { timeout: 100 }),
@@ -92,19 +99,84 @@ test(`Hook returns \`false\` when multiple \`FontFace\`s were passed and rejecte
     }
   )
 
-  let flag = false
+  await waitForNextUpdate()
 
-  try {
-    await waitForNextUpdate()
-  } catch (error) {
-    if (
-      error instanceof Error &&
-      error.message.toLowerCase().includes(`timed out`)
-    ) {
-      flag = true
+  expect(result.current.isLoading).toBe(false)
+  expect(result.current.isResolved).toBe(false)
+  expect(result.current.error).toEqual(testError)
+})
+
+test(`Hook returns error state with timeout error`, async () => {
+  const timeoutError = new Error(`Timeout exceeded`)
+  MockedFontFaceObserverModule.load = jest
+    .fn()
+    .mockImplementationOnce(async () => Promise.reject(timeoutError))
+
+  const { result, waitForNextUpdate } = renderHook(
+    ({ fontFaces }) => useFontFaceObserver(fontFaces, { timeout: 100 }),
+    {
+      initialProps: {
+        fontFaces: [
+          {
+            family: `Amstelvar`,
+          },
+        ],
+      },
     }
-  }
+  )
 
-  expect(flag).toBe(true)
-  expect(result.current).toBe(false)
+  await waitForNextUpdate()
+
+  expect(result.current.isLoading).toBe(false)
+  expect(result.current.isResolved).toBe(false)
+  expect(result.current.error).toEqual(timeoutError)
+})
+
+test(`Hook starts with loading state`, () => {
+  MockedFontFaceObserverModule.load = jest
+    .fn()
+    .mockImplementationOnce(async () => new Promise(() => {})) // Never resolves
+
+  const { result } = renderHook(
+    ({ fontFaces }) => useFontFaceObserver(fontFaces),
+    {
+      initialProps: {
+        fontFaces: [
+          {
+            family: `Amstelvar`,
+          },
+        ],
+      },
+    }
+  )
+
+  expect(result.current.isLoading).toBe(true)
+  expect(result.current.isResolved).toBe(false)
+  expect(result.current.error).toBe(null)
+})
+
+test(`Hook converts non-Error rejections to Error objects`, async () => {
+  MockedFontFaceObserverModule.load = jest
+    .fn()
+    .mockImplementationOnce(async () => Promise.reject(`String error`))
+
+  const { result, waitForNextUpdate } = renderHook(
+    ({ fontFaces }) => useFontFaceObserver(fontFaces),
+    {
+      initialProps: {
+        fontFaces: [
+          {
+            family: `Amstelvar`,
+          },
+        ],
+      },
+    }
+  )
+
+  await waitForNextUpdate()
+
+  expect(result.current.isLoading).toBe(false)
+  expect(result.current.isResolved).toBe(false)
+  expect(result.current.error).toBeInstanceOf(Error)
+  expect(result.current.error?.message).toBe(`String error`)
 })

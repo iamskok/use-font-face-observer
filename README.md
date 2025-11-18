@@ -17,11 +17,25 @@ yarn add use-font-face-observer
 
 ## Usage Examples
 
+### Return Value
+
+The hook returns an object with the following properties:
+
+```typescript
+{
+  isLoading: boolean;  // true while fonts are loading
+  isResolved: boolean; // true when all fonts have loaded successfully
+  error: Error | null; // contains error information if loading fails (e.g., timeout)
+}
+```
+
+### Basic Usage
+
 1. Detect when a single font face is loaded (condensed, italic, and bold
    Roboto):
 
 ```js
-const isFontListLoaded = useFontFaceObserver([
+const { isLoading, isResolved, error } = useFontFaceObserver([
   {
     family: `Roboto`,
     style: `italic`,
@@ -29,12 +43,24 @@ const isFontListLoaded = useFontFaceObserver([
     stretch: `condensed`,
   },
 ]);
+
+if (isLoading) {
+  return <div>Loading fonts...</div>;
+}
+
+if (error) {
+  return <div>Font loading failed: {error.message}</div>;
+}
+
+if (isResolved) {
+  return <div style={{ fontFamily: 'Roboto' }}>Fonts loaded!</div>;
+}
 ```
 
 2. Detect when multiple font faces are loaded:
 
 ```js
-const isFontListLoaded = useFontFaceObserver([
+const { isLoading, isResolved, error } = useFontFaceObserver([
   { family: `Roboto` },
   { family: `Inter` },
 ]);
@@ -48,7 +74,7 @@ const isFontListLoaded = useFontFaceObserver([
 - Show console errors (defaults to `false`)
 
 ```js
-const isFontListLoaded = useFontFaceObserver(
+const { isLoading, isResolved, error } = useFontFaceObserver(
   [{ family: `Roboto` }],
   {
     testString: `ФЯЦ`,
@@ -58,4 +84,10 @@ const isFontListLoaded = useFontFaceObserver(
     showErrors: true,
   },
 )
+
+// Handle timeout or other errors
+if (error) {
+  console.log('Font loading error:', error);
+  // You can now act on the error, e.g., show fallback fonts
+}
 ```
